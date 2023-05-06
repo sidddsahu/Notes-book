@@ -5,14 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node backend/index.js",
-    "server":"nodemon backend/index.js",
-    "build": "npm i",
-    "both": "concurrently \"npm start\" \"nodemon backend/index.js\""
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm start --prefix ../frontend",
+    "dev": "concurrently \"npm start\"npm run client\"",
+    "render-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    
 
- 
-
-   
   },
   "author": "",
   "license": "ISC",

@@ -9,7 +9,9 @@
     "server": "nodemon index.js",
     "client": "npm start --prefix ../frontend",
     "dev": "concurrently \"npm start\"npm run client\"",
-    "render-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "render-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "both": "concurrently \"npm run start\" \"nodemon backend/index.js\""
+
     
 
   },

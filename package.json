@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "npm start --prefix ../frontend",
+    "start": "node backend/index.js",
+    "server": "nodemon backend/index.js",
     "render-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "build:dev": "node_modules/.bin/webpack-dev-server --env=dev",
     "build:prod": "node_modules/.bin/webpack -p --env=prod"

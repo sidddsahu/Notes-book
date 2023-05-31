@@ -5,6 +5,7 @@ const cors = require('cors')
 const app = express()
 const port = 5000
 const path = require("path")
+require("dotenv").config({path: "./.env"});
 // const build = require("../frontend/")
 
 connectDatabase()
